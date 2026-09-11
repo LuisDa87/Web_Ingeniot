@@ -1,8 +1,25 @@
 # Backend Automation, IoT & AI Engineering Portfolio
 
-Professional engineering case studies by **Luis David Ducuara Cadavid**, Backend & Automation Developer and Mechatronics Engineering student.
+**Real-world integration case studies by Luis David Ducuara Cadavid**  
+Backend & Automation Developer · Mechatronics Engineering Student
 
-These case studies summarize work developed at Ingeniot S.A.S. at a portfolio-appropriate level. Client names, proprietary source code, production endpoints, credentials, personal data, contractual figures, and confidential implementation details are intentionally excluded.
+I design systems that connect business processes, legacy platforms, payment services, cloud infrastructure, data, and physical devices. My engineering priorities are reliability, traceability, secure integration, and maintainable automation.
+
+![Automation, IoT and AI systems connected through cloud APIs](docs/assets/automation-iot-ai-hero.jpg)
+
+*Sanitized portfolio visualization reconstructed from approved project references. It contains no production data, customer branding, personal information, or functional codes.*
+
+> These case studies summarize professional work developed at Ingeniot S.A.S. at a portfolio-appropriate level. Proprietary source code, production endpoints, credentials, customer data, contractual figures, and confidential implementation details are intentionally excluded.
+
+## Portfolio at a glance
+
+| Case study | Engineering problem | What it demonstrates |
+| --- | --- | --- |
+| [Healthcare self-service automation](#case-study-1-healthcare-self-service-kiosk-automation) | Coordinate appointments, legacy workflows, payments, and transactional evidence | APIs, RPA, webhooks, payment gateways, workflow state, auditability |
+| [Environmental monitoring and HVAC automation](#case-study-2-environmental-monitoring-and-hvac-automation) | Monitor distributed environments and react safely to changing conditions | IoT telemetry, edge integration, alerts, reporting, control rules |
+| [Access control analytics with AI](#case-study-3-access-control-analytics-with-natural-language-ai) | Make operational event data easier to query without exposing unrestricted database access | Event ingestion, controlled SQL, LLM integration, authorization, audit logs |
+
+---
 
 ## Case Study 1: Healthcare Self-Service Kiosk Automation
 
@@ -14,13 +31,19 @@ High-volume service locations depend on several disconnected systems for appoint
 
 A self-service workflow that coordinates authorized APIs, RPA actions, payment integrations, webhooks, and transactional records from a patient-facing kiosk.
 
+![Healthcare kiosk, mobile services and cloud integration workflow](docs/assets/healthcare-self-service-automation.jpg)
+
+*Reconstructed and anonymized portfolio visual. Screens, identities, brands, and data are illustrative.*
+
+### Architecture
+
 ```mermaid
 flowchart TD
-    A[Kiosk Application] --> B[Automation Backend]
-    B --> C[Scheduling Integration]
-    B --> D[RPA Worker]
-    B --> E[Payment Gateway]
-    C --> F[Audit and Transaction Records]
+    A["Kiosk application"] --> B["Automation backend"]
+    B --> C["Scheduling API"]
+    B --> D["RPA worker"]
+    B --> E["Payment gateway"]
+    C --> F["Audit and transaction records"]
     D --> F
     E --> F
 ```
@@ -30,10 +53,10 @@ flowchart TD
 - Same-day appointment validation through an authorized API.
 - Automated arrival confirmation in a legacy operational system.
 - Retrieval of applicable service fees.
-- QR-based payment initiation.
-- Webhook processing for payment confirmation.
+- QR-based payment initiation and webhook-based confirmation.
 - Receipt and transaction evidence generation.
-- Workflow states, retries, timeouts, and assisted fallback paths.
+- Explicit workflow states, retries, timeouts, and assisted fallback paths.
+- Auditable coordination between customer-facing and back-office systems.
 
 ### My contribution
 
@@ -41,7 +64,7 @@ flowchart TD
 - REST API, webhook, RPA, and payment gateway integrations.
 - PostgreSQL transaction tracking and operational traceability.
 - Dockerized services and AWS-based components.
-- Technical coordination of a four-person development team.
+- Technical planning and coordination for a four-person development team.
 
 ### Technology profile
 
@@ -59,21 +82,27 @@ Distributed facilities require continuous temperature and humidity supervision i
 
 An IoT monitoring platform that captures thermohygrometer measurements at regular intervals, centralizes telemetry, produces alerts and reports, and supports automated HVAC control rules.
 
+![Wireless thermohygrometer connected to telemetry dashboards and HVAC automation](docs/assets/environmental-monitoring-iot.jpg)
+
+*Reconstructed and anonymized portfolio visual. Measurements and dashboard states are illustrative.*
+
+### Architecture
+
 ```mermaid
 flowchart TD
-    A[Thermohygrometer Sensors] --> B[Edge Controller]
-    B --> C[Telemetry API]
-    C --> D[Data and Reporting]
-    C --> E[Alerts and HVAC Rules]
+    A["Thermohygrometer sensors"] --> B["Edge controller"]
+    B --> C["Telemetry API"]
+    C --> D["Data and reporting"]
+    C --> E["Alerts and HVAC rules"]
 ```
 
 ### Main capabilities
 
 - Continuous temperature and humidity monitoring.
 - Five-minute telemetry collection intervals.
-- Multi-location device visibility.
-- Threshold and device-status alerts.
-- Historical reports and traceability.
+- Multi-location device visibility and health status.
+- Threshold, connectivity, and device-status alerts.
+- Historical reports and operational traceability.
 - Scheduled and condition-based HVAC automation.
 - Safe behavior during connectivity or sensor failures.
 
@@ -101,12 +130,18 @@ Access-control platforms generate large volumes of event records. Operational te
 
 A conversational analytics layer that allows authorized users to ask operational questions in natural language and receive structured answers based on access-control records.
 
+![Biometric access terminal connected to a mobile dashboard and controlled AI analytics](docs/assets/smart-access-control-ai.jpg)
+
+*Reconstructed and anonymized portfolio visual. Identities and access events are fictional.*
+
+### Architecture
+
 ```mermaid
 flowchart TD
-    A[Access Devices] --> B[Event Ingestion Service]
-    B --> C[Access Records Database]
-    C --> D[Authorized AI Query Service]
-    D --> E[Conversational Dashboard]
+    A["Access devices"] --> B["Event ingestion service"]
+    B --> C["Access records database"]
+    C --> D["Authorized AI query service"]
+    D --> E["Conversational dashboard"]
 ```
 
 ### Example questions
@@ -117,7 +152,7 @@ flowchart TD
 - Show access activity for an authorized date range.
 - Summarize unusual operational patterns for review.
 
-### Engineering considerations
+### Engineering controls
 
 - Role-based access to queries and results.
 - Read-only, validated database operations.
@@ -137,20 +172,16 @@ flowchart TD
 | Area | Demonstrated experience |
 | --- | --- |
 | Backend | APIs, microservices, validation, integration services |
-| Automation | n8n, RPA, webhooks, stateful workflows |
-| Data | PostgreSQL, telemetry, transactions, audit trails |
+| Automation | n8n, RPA, webhooks, retries, stateful workflows |
+| Data | PostgreSQL, telemetry, transactions, reconciliation, audit trails |
 | Cloud | AWS Lambda, API Gateway, RDS, event-driven services |
-| IoT | Sensors, edge controllers, alerts, actuator integration |
-| AI | Natural-language operational queries and controlled data access |
-| Leadership | Technical planning and coordination of a four-person team |
+| IoT | Sensors, edge controllers, alerts, device health, actuator integration |
+| AI | Natural-language operational queries with controlled data access |
+| Delivery | Technical planning, documentation, and coordination of a four-person team |
 
-## Confidentiality and security
+## Confidentiality and visual integrity
 
-This repository contains architectural summaries only. It does not contain production code, real patient or employee data, biometric information, API credentials, functional QR codes, internal URLs, or customer-specific documentation.
-
-## Visual documentation
-
-Sanitized screenshots and diagrams will be added after removing names, identifiers, appointments, access records, URLs, QR codes, and third-party confidential branding.
+This repository contains architectural summaries and reconstructed portfolio visuals. It does **not** contain production code, real patient or employee data, biometric information, API credentials, functional QR codes, internal URLs, or customer-specific documentation. Visuals are explicitly labeled so they are not mistaken for production screenshots.
 
 ## Related public projects
 
